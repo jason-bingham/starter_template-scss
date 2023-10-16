@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.card {
+  display: grid;
+  gap: $gap-grid;
+  padding: $padding-card-body;
+}
