@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $colors: (
   neutral: (
     100: white,
@@ -10,3 +12,11 @@ $colors: (
     500: #dd4e11,
   ),
 );
+
+@function clr($color, $shade) {
+  @if map.has-key($colors, $color, $shade) {
+    @return map.get($colors, $color, $shade);
+  } @else {
+    @error '$colors does not contain that color.';
+  }
+}

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $ff-sans: "Lato", sans-serif;
 $ff-serif: "Abril Fatface", serif;
 $ff-base: $ff-sans;
@@ -16,3 +18,11 @@ $fw-thin: 200;
 $fw-regular: 400;
 $fw-bold: 700;
 $fw-black: 900;
+
+@function fs($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  } @else {
+    @error '$font-sizes does not contain that size.';
+  }
+}
