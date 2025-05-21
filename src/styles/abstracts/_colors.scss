@@ -3,9 +3,9 @@
 $colors: (
   neutral: (
     100: white,
-    200: #f8f8f8,
+    200: #eadebc,
     400: #5c5c5c,
-    900: #212121,
+    900: #242424,
   ),
   primary: (
     400: #ff6635,
@@ -18,5 +18,16 @@ $colors: (
     @return map.get($colors, $color, $shade);
   } @else {
     @error '$colors does not contain that color.';
+  }
+}
+
+@each $color, $shade-map in $colors {
+  @each $shade, $value in $shade-map {
+    .clr-#{$color}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
   }
 }
