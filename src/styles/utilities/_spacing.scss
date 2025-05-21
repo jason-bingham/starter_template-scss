@@ -47,6 +47,7 @@
       margin-inline: $size-value;
     }
   }
+
   .padding {
     &-#{$size-name} {
       padding: $size-value;
