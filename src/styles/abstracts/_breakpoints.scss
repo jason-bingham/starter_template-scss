@@ -1,5 +1,26 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+
 $breakpoints: (
   small: 30em,
   medium: 45em,
   large: 65em,
 );
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'must specify units';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
