@@ -2,7 +2,9 @@
 
 .hero {
   padding-block: $padding-hero;
-  background-image: url(../../assets/hero-bg.webp);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
+    url(/images/Jungle.png);
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }

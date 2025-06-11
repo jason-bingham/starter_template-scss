@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-.flex-group {
+.flex {
   display: flex;
   column-gap: var(--flex-column-gap, $gap-flex-group);
   row-gap: var(--flex-row-gap, calc($gap-flex-group / 2));
@@ -8,7 +8,39 @@
   width: fit-content;
   flex-wrap: wrap;
 
-  &.mx-auto {
+  &.flex-center-x {
     justify-content: center;
+  }
+
+  &.flex-center-y {
+    align-items: center;
+  }
+  &.flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  &.flex-between {
+    justify-content: space-between;
+  }
+  &.flex-around {
+    justify-content: space-around;
+  }
+  &.flex-evenly {
+    justify-content: space-evenly;
+  }
+  &.flex-column {
+    flex-direction: column;
+  }
+  &.flex-column-reverse {
+    flex-direction: column-reverse;
+  }
+  &.flex-row {
+    flex-direction: row;
+  }
+  &.flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  &.flex-fullwidth {
+    width: 100%;
   }
 }

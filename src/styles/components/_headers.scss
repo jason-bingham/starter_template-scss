@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.primary-header {
+  position: absolute;
+  inset: 0 0 auto;
+  // width: 100%; works instead of inset
+
+  padding-inline: size("16-48");
+  padding-block: size(16);
+
+  backdrop-filter: blur(10px);
+
+  .logo {
+    width: size(80);
+    // width: size(96);
+  }
+}
