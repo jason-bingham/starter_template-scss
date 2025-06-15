@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+@keyframes to-size-48 {
+  100% {
+    width: size(48);
+  }
+}

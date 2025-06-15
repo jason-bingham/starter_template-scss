@@ -17,7 +17,7 @@
   }
   &.flex-center {
     justify-content: center;
-    align-items: center;
+    align-content: center;
   }
   &.flex-between {
     justify-content: space-between;
@@ -42,5 +42,11 @@
   }
   &.flex-fullwidth {
     width: 100%;
+  }
+  &.container {
+    --padding: #{$container-inline-spacing} * 2;
+    --max-width: #{$container-max-width};
+    width: min(100% - var(--padding), var(--max-width));
+    margin-inline: auto;
   }
 }

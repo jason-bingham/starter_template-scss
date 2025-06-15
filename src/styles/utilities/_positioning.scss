@@ -1,0 +1,38 @@
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+// Margin utilities
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.my-auto {
+  margin-block: auto;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+.push-left {
+  margin-right: auto;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}

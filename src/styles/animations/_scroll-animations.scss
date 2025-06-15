@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+@use "keyframes" as *;
+
+.shrink-on-scroll {
+  animation: to-size-48 linear forwards;
+  animation-timeline: view();
+  animation-range: 110vh 180vh;
+}

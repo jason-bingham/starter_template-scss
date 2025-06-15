@@ -1,7 +1,16 @@
 @use "sass:map";
 
-$ff-sans: "Lato", sans-serif;
-$ff-serif: "Abril Fatface", serif;
+$system-serif: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif",
+  "Times", "Source Serif Pro", serif;
+$system-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono",
+  "Source Code Pro", monospace;
+$system-sans: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$ff-sans: $system-sans, sans-serif;
+$ff-serif: $system-serif, serif;
+$ff-mono: $system-mono, monospace;
+
 $ff-base: $ff-sans;
 $ff-accent: $ff-serif;
 

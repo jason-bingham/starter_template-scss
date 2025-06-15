@@ -7,4 +7,9 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  font-family: $ff-accent;
+
+  &__content {
+    height: 100%;
+  }
 }

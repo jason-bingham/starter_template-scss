@@ -17,6 +17,10 @@
   margin-right: auto;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
 @each $size-name, $size-value in $sizes {
   .margin {
     &-#{$size-name} {
