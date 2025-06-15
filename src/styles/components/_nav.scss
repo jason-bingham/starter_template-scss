@@ -1,9 +1,5 @@
 @use "../abstracts/" as *;
 
-.nav {
-  backdrop-filter: blur(10px);
-}
-
 .primary-nav {
   --flex-column-gap: #{size(48)};
 

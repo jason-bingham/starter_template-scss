@@ -8,3 +8,10 @@ body {
   line-height: 1.5;
   background: clr(neutral, 200);
 }
+
+section {
+  padding-block: $padding-section-block;
+  padding-inline: $padding-section-inline;
+  width: 100%;
+  position: relative;
+}

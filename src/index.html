@@ -13,8 +13,10 @@
   <body>
     <header class="primary-header | sticky">
       <div
-        class="nav | flex flex-between flex-fullwidth flex-center-y | padding-block-16 padding-inline-32 | bg-neutral-100-2"
+        class="nav | flex flex-between flex-fullwidth flex-center-y | padding-block-16 padding-inline-32 | frosted-glass"
       >
+        <div class="frosted-glass-backdrop"></div>
+        <div class="frosted-glass-backdrop-edge"></div>
         <img
           class="logo shrink-on-scroll"
           src="/images/SandlotStudio_Logo.svg"
@@ -46,12 +48,37 @@
       <h1
         class="text-center fs-600 fw-bold padding-block-start-48 padding-inline-32"
       >
-        Sandlot Template
+        Section with some cards
       </h1>
-      <h2 class="subheading text-center fs-600 margin-block-32">
-        1. `npm install`
-      </h2>
-      <h2 class="text-center fs-600 margin-block-32">2. `npm run dev`</h2>
+      <div>
+      <section>
+        <div class="container smol-css-grid">
+          <div class="smol-card-component">
+            <img src="/images/SandlotStudio_Logo.svg" alt="" />
+            <h2>Card Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+              ipsum.
+            </p>
+          </div>
+          <div class="smol-card-component">
+            <img src="/images/SandlotStudio_Logo.svg" alt="" />
+            <h2>Card Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+              ipsum.
+            </p>
+          </div>
+          <div class="smol-card-component">
+            <img src="/images/SandlotStudio_Logo.svg" alt="" />
+            <h2>Card Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+              ipsum.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
     <footer></footer>
   </body>

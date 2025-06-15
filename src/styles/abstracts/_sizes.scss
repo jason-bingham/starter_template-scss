@@ -158,3 +158,9 @@ $container-max-width-s: 45rem;
 $container-max-width: 60rem;
 $container-max-width-l: 75rem;
 $container-max-width-xl: 90rem;
+
+$padding-logo: clamp(0.5rem, 2vw, 1.5rem);
+$padding-hero: clamp(5rem, 15vw, 20rem);
+$padding-section-block: clamp(3rem, 10vw, 7rem);
+$padding-section-inline: clamp(1.5rem, 0.5rem + 4vw, 3rem);
+$padding-card-body: clamp(2rem, 3vw, 5rem);

@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.frosted-glass {
+  position: relative;
+  background: rgb(clr(neutral, 100), 0.4);
+
+  &-backdrop {
+    position: absolute;
+    inset: 0;
+    height: 200%;
+    background: linear-gradient(
+      to bottom,
+      clr(neutral, 100) 0%,
+      transparent 50%,
+      transparent 100%
+    );
+    backdrop-filter: blur(16px);
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, black 0% 50%, transparent 50% 100%);
+    pointer-events: none;
+
+    &-edge {
+      --thickness: 2px;
+      position: absolute;
+      inset: 0;
+      /*
+      Only a few pixels will be visible, but we’ll
+      set the height by 100% to include nearby elements.
+    */
+      height: 100%;
+      /*
+      Shift down by 100% of its own height, so that the
+      edge stacks underneath the main <header>:
+    */
+      transform: translateY(100%);
+      background: rgb(clr(neutral, 100), 0.01);
+      backdrop-filter: blur(8px) brightness(110%);
+      pointer-events: none;
+      /*
+      We mask out everything aside from the first few
+      pixels, specified by the --thickness variable:
+    */
+      mask-image: linear-gradient(
+        to bottom,
+        black 0,
+        black var(--thickness),
+        transparent var(--thickness)
+      );
+    }
+  }
+}
