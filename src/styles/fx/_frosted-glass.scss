@@ -1,8 +1,13 @@
 @use "../abstracts/" as *;
 
+// NOTE: put the following divs in the frosted-glass element:
+// <div class="frosted-glass-backdrop"></div>
+// <div class="frosted-glass-backdrop-edge"></div>
+
 .frosted-glass {
+  $glass-color: clr(neutral, 100);
   position: relative;
-  background: rgb(clr(neutral, 100), 0.4);
+  background: rgb($glass-color, 0.4);
 
   &-backdrop {
     position: absolute;
@@ -10,7 +15,7 @@
     height: 200%;
     background: linear-gradient(
       to bottom,
-      clr(neutral, 100) 0%,
+      $glass-color 0%,
       transparent 50%,
       transparent 100%
     );
@@ -20,7 +25,7 @@
     pointer-events: none;
 
     &-edge {
-      --thickness: 2px;
+      --thickness: 1px;
       position: absolute;
       inset: 0;
       /*
@@ -33,7 +38,7 @@
       edge stacks underneath the main <header>:
     */
       transform: translateY(100%);
-      background: rgb(clr(neutral, 100), 0.01);
+      background: rgb($glass-color, 0.5);
       backdrop-filter: blur(8px) brightness(110%);
       pointer-events: none;
       /*
