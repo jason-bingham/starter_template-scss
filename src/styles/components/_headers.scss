@@ -2,12 +2,9 @@
 
 .primary-header {
   height: 0px;
-  inset: 0 0 auto;
-  // width: 100%; works instead of inset
   z-index: 1000;
 
   .logo {
     width: size(80);
-    // width: size(96);
   }
 }

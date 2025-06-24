@@ -1,12 +1,20 @@
 @use "../abstracts/" as *;
 
 .flex {
+  --flex-column-gap: #{$gap-flex-group};
+  --flex-row-gap: #{$gap-flex-group};
+  --min: 15ch;
+
   display: flex;
-  column-gap: var(--flex-column-gap, $gap-flex-group);
-  row-gap: var(--flex-row-gap, calc($gap-flex-group / 2));
+  column-gap: var(--flex-column-gap);
+  row-gap: var(--flex-row-gap);
   width: -moz-fit-content;
   width: fit-content;
   flex-wrap: wrap;
+
+  &-grid > * {
+    flex: 1 1 var(--min);
+  }
 
   &.flex-center-x {
     justify-content: center;
@@ -42,11 +50,5 @@
   }
   &.flex-fullwidth {
     width: 100%;
-  }
-  &.container {
-    --padding: #{$container-inline-spacing} * 2;
-    --max-width: #{$container-max-width};
-    width: min(100% - var(--padding), var(--max-width));
-    margin-inline: auto;
   }
 }

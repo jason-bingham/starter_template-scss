@@ -7,9 +7,9 @@ export default {
       content: ["./**/*.html"],
     }),
     postcssPresetEnv({
-      stage: 2,
+      stage: 3,
       features: {
-        "logical-properties-and-values": true,
+        "logical-properties-and-values": false,
         "opacity-percentage": true,
         "text-decoration-shorthand": true,
       },

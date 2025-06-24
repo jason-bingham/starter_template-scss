@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+.grid {
+  --grid-row-gap: #{$grid-gap};
+  --grid-column-gap: #{$grid-gap};
+  --min: 15ch;
+
+  display: grid;
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+
+  &-auto-fit {
+    @extend .grid;
+    /* min() with 100% prevents overflow
+    in extra narrow spaces */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+    &.template {
+      grid-template-columns: var(--min) repeat(
+          auto-fit,
+          minmax(var(--min), 1fr)
+        );
+
+      .smol-card-component:first-of-type {
+        position: relative;
+
+        &::before {
+          content: "--min: 15ch";
+          position: absolute;
+          top: -30px;
+          color: red;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: red;
+          top: -5px;
+        }
+      }
+    }
+  }
+
+  &-even-columns {
+    @extend .grid;
+
+    @include mq(medium) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+    }
+  }
+}

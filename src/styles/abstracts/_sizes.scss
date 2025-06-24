@@ -83,6 +83,28 @@ $sizes: (
   }
 }
 
+$padding-nav-inline: size("16-48");
+$padding-nav-block: size("12-16");
+
+$padding-hero: size(24);
+
+$padding-section: clamp(3rem, 10vh, 7rem);
+$padding-section-block: clamp(3rem, 10vw, 7rem);
+$padding-section-inline: clamp(1.5rem, 0.5rem + 4vw, 3rem);
+
+$padding-card-body: clamp(2rem, 3vw, 5rem);
+
+$grid-gap: size(24);
+$gap-flex-group: size(16);
+
+$container-inline-spacing: 1rem;
+$container-max-width-s: 45rem;
+$container-max-width: 60rem;
+$container-max-width-l: 75rem;
+$container-max-width-xl: 90rem;
+
+// SIZE UTILITY CLASSES
+
 @each $size-name, $size-value in $sizes {
   .margin {
     &-#{$size-name} {
@@ -144,23 +166,3 @@ $sizes: (
     }
   }
 }
-
-$padding-hero: clamp(15rem, 15vh, 20rem);
-$padding-section: clamp(3rem, 10vh, 7rem);
-$padding-card-body: clamp(2rem, 3vw, 5rem);
-$padding-logo: size("16-24");
-
-$gap-grid: 1.5rem;
-$gap-flex-group: 1rem;
-
-$container-inline-spacing: 1rem;
-$container-max-width-s: 45rem;
-$container-max-width: 60rem;
-$container-max-width-l: 75rem;
-$container-max-width-xl: 90rem;
-
-$padding-logo: clamp(0.5rem, 2vw, 1.5rem);
-$padding-hero: clamp(5rem, 15vw, 20rem);
-$padding-section-block: clamp(3rem, 10vw, 7rem);
-$padding-section-inline: clamp(1.5rem, 0.5rem + 4vw, 3rem);
-$padding-card-body: clamp(2rem, 3vw, 5rem);

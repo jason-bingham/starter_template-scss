@@ -13,17 +13,17 @@
   <body>
     <header class="primary-header | sticky">
       <div
-        class="nav | flex flex-between flex-fullwidth flex-center-y | padding-block-16 padding-inline-32 | frosted-glass"
+        class="nav | flex flex-between flex-fullwidth flex-center-y | frosted-glass"
       >
         <div class="frosted-glass-backdrop"></div>
         <div class="frosted-glass-backdrop-edge"></div>
         <img
-          class="logo shrink-on-scroll"
+          class="logo | shrink-on-scroll"
           src="/images/SandlotStudio_Logo.svg"
-          alt="logo"
+          alt="sandlot logo"
         />
-        <nav class="primary-nav | flex">
-          <ul class="flex">
+        <nav class="primary-nav-wrapper">
+          <ul class="primary-nav | flex">
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
@@ -45,8 +45,32 @@
       </div>
       <section>
         <div class="container">
-          <h1 class="section-heading">Section with some cards</h1>
-          <div class="smol-css-grid">
+          <h1 class="section-heading">Grid section with cards</h1>
+          <div class="grid-auto-fit [ template ]">
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
             <div class="smol-card-component">
               <img src="/images/SandlotStudio_Logo.svg" alt="" />
               <h2>Card Title</h2>
@@ -74,6 +98,62 @@
           </div>
         </div>
       </section>
+      <section class="bg-neutral-100">
+        <div class="container">
+          <h1 class="section-heading">Flexbox section with cards</h1>
+          <div class="flex flex-grid">
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+            <div class="smol-card-component">
+              <img src="/images/SandlotStudio_Logo.svg" alt="" />
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials-section"></section>
     </main>
     <footer></footer>
   </body>
