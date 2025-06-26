@@ -5,3 +5,9 @@
     width: size(48);
   }
 }
+
+@keyframes shift-up {
+  100% {
+    top: -1000px;
+  }
+}

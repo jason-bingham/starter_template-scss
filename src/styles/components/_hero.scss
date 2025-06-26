@@ -1,15 +1,17 @@
 @use "../abstracts/" as *;
 
 .hero {
-  padding: $padding-hero;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
-    url(/images/Jungle.png);
-  background-size: cover;
-  background-position: center;
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
+  //   url(/images/Jungle.png);
+  // background-size: cover;
+  // background-position: center;
   height: 100vh;
   font-family: $ff-accent;
+  overflow: hidden;
+  position: relative;
 
   &__content {
+    padding: $padding-hero;
     height: 100%;
   }
 
