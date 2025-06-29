@@ -32,7 +32,25 @@
   margin-right: auto;
 }
 
+.push-down {
+  margin-top: auto;
+}
+
+.push-up {
+  margin-bottom: auto;
+}
+
 .center {
   display: grid;
   place-items: center;
+}
+
+.center-block {
+  display: grid;
+  align-items: center;
+}
+
+.center-inline {
+  display: grid;
+  justify-items: center;
 }
