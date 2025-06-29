@@ -1,14 +1,30 @@
 @use "../abstracts/" as *;
 
 .hero {
-  // background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
-  //   url(/images/Jungle.png);
-  // background-size: cover;
-  // background-position: center;
   height: 100vh;
   font-family: $ff-accent;
   overflow: hidden;
   position: relative;
+
+  &-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8)),
+      url(/images/Jungle.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+
+    @keyframes shift-zoom {
+      100% {
+        transform: translateY(1000px) scale(2);
+      }
+    }
+
+    animation: shift-zoom linear forwards;
+    animation-timeline: scroll(block root);
+  }
 
   &__content {
     padding: $padding-hero;
